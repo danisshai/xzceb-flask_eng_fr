@@ -1,1 +1,1 @@
-# coding-project-template
+# This project is to create a Python translate API, and is part of the IBM Coursera Fullstack program
