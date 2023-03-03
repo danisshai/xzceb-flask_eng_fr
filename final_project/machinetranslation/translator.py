@@ -32,3 +32,7 @@ def englishToFrench(text):
     #write the code here
     translator_instance(text, "en-fr")
     return frenchText
+
+def englishToFrench(text):
+    translator_instance(text, "fr-en")
+    return englishText
