@@ -1,5 +1,5 @@
 """
-high level support for doing this and that.
+ibm_cloud_sdk_core requires to be run on python >= 3.8 to work
 """
 import json
 import os
@@ -28,10 +28,14 @@ def translator_instance(text, model):
     mode: String of model name for example 'en-es' if you want
           to translate from english to spanish
     """
+    if not text:
+        return "no text provided"
     translation = language_translator.translate(
         text=text,
-        model_id=model).get_result()
-    return json.dumps(translation, indent=2, ensure_ascii=False)
+        model_id=model
+        ).get_result()
+
+    return translation["translations"][0]["translation"]
 
 def english_to_french(text):
     """
